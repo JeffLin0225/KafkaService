@@ -16,6 +16,6 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 bin/kafka-console-producer.sh --topic test-topic --bootstrap-server localhost:9092
 然後輸入你要給的資料：比如hello world   (enter)
 
-===== 查詢 Consumer (查你剛剛輸入的資料) ================
+===== 查詢 Consumer (查你剛剛輸入的資料) ===============
 bin/kafka-console-consumer.sh --topic test-topic --bootstrap-server localhost:9092 --from-beginning
 
