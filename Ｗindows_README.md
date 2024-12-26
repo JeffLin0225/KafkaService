@@ -13,7 +13,7 @@ Windows 版本
 
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
-===== New Topic ================
+===== New Topic ===============
 
 .\bin\windows\kafka-topics.bat --create --topic my-new-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
