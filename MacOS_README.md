@@ -1,0 +1,21 @@
+MAC版本
+===== ZooKeeper ================
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+===== Broker ================
+bin/kafka-server-start.sh config/server.properties
+
+===== New Topic ================可以直接打沒有的topic 會自動生成非自己關掉
+kafka-topics --create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 
+
+===== Check 列出所有 topic ================
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+(以下已test-topic 為例)
+===== 給資料  productor================
+bin/kafka-console-producer.sh --topic test-topic --bootstrap-server localhost:9092
+然後輸入你要給的資料：比如hello world   (enter)
+
+===== 查詢 Consumer (查你剛剛輸入的資料) ================
+bin/kafka-console-consumer.sh --topic test-topic --bootstrap-server localhost:9092 --from-beginning
+
